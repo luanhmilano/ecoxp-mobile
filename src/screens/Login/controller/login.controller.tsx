@@ -16,9 +16,9 @@ export default function LoginController({ navigation }: any) {
         try {
             const response = await api.post('/auth/login', { email, password });
 
-            const { access_token } = response.data;
+            const { accessToken } = response.data;
 
-            console.log('Login bem-sucedido! Token:', access_token);
+            console.log('Login bem-sucedido! Token:', accessToken);
             Alert.alert('Sucesso!', 'Você está conectado.');
 
             if (response.status === 200) {
